@@ -77,3 +77,14 @@ print(ob(34)(5,3))
 
 num = [67,2,5,177,-9,34,122,4,7,1,100,-4,0,5]
 
+#stwórz listę nparz i przekaż do niej wszystkie wartości parzyste z listy num
+#funkcja filter  standardowa wyższego rzędu -> parametrem 0 jest inna funkcja, 1 jest źrodło danych
+
+nparz = list(filter(lambda x:x%2==0,num))
+print(nparz)
+
+#stwórz listę cube i przekaż do niej wszystkie wartości z listy num podniesione do potęgi 3
+
+cube = list(map(lambda x:x**3,num))
+print(cube)
+
