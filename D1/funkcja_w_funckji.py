@@ -12,6 +12,7 @@ def osoba(funkcja,*args):
 print(osoba(witaj,"Leon"))
 print(osoba(konkurs,"Tomek",45))
 
+
 #przykład 2
 
 def rejestracja(oplata):
@@ -31,3 +32,34 @@ def rejestracja(oplata):
 print(rejestracja(1)())
 print(rejestracja(0)())
 print(rejestracja(6)())
+
+
+#przykład3
+
+def startstop(funkcja):
+    def wrapper(*args):
+        print("Startowanie procesu....")
+        funkcja(*args)
+        print("Kończenie procesu....")
+    return wrapper
+
+def zawijanie():
+    print("zawijanie czekoladek w sreberka")
+print("__________________________________")
+zw = startstop(zawijanie)
+zw()
+
+@startstop
+def dmuchanie():
+    print("dmuchanie baloników na imprezę...")
+
+
+print("__________________________________")
+dmuchanie()
+print("__________________________________")
+@startstop
+def fx(n):
+    print(f"wynik = {n*2}")
+
+fx(9)
+
