@@ -53,4 +53,27 @@ rank("Java","Ruby","C++","Python","JavaScript",nrrank=27)
 
 #funkcja lambda
 
+print((lambda e:e**3)(4))
+
+b = lambda u:u+90
+
+print(b(8))
+
+def px(u):
+    return u+90
+
+print(px(8))
+
+h = lambda a,b,c=3:a/(b-c)
+
+print(h(4,6,2))
+print(h(4,6,56))
+print(h(4,6))
+
+def ob(k):
+    return lambda a,b:a**k-b
+
+print(ob(34)(5,3))
+
+num = [67,2,5,177,-9,34,122,4,7,1,100,-4,0,5]
 
