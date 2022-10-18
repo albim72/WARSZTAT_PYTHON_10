@@ -88,3 +88,39 @@ print(nparz)
 cube = list(map(lambda x:x**3,num))
 print(cube)
 
+def dodaj(x):
+    return x + 3
+
+
+trojka = list(map(dodaj,num))
+print(trojka)
+
+
+#własne funkcje wyższego rzędu
+
+def filtrowanie(dane,test):
+    plus = []
+    for element in dane:
+        if (test(element)):
+            plus.append(element)
+    return plus
+
+
+def ekstra_liczba(n):
+    return n >=100
+
+mliczby = [119,0,-6,17,93,101,70,231]
+
+print(filtrowanie(mliczby,ekstra_liczba))
+
+
+def mapowanie(dane,transformacja):
+    mapa = []
+    for element in dane:
+        mapa.append(transformacja(element))
+    return mapa
+
+def addFive(n):
+    return n+5
+
+print(mapowanie(mliczby,addFive))
