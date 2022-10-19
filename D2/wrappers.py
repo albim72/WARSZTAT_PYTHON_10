@@ -48,4 +48,16 @@ def big_lista_d():
 big_lista_d()
 
 
+#dekorator z funkcją magiczną __name__
 
+def debug(funkcja):
+    def wrapper(*args,**kwargs):
+        print(f'wołana funkcja to: {funkcja.__name__}')
+        funkcja(*args)
+    return wrapper
+
+@debug
+def info(i):
+    print(f"informacja: {i}")
+
+info("nr 4566")
