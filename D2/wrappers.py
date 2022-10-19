@@ -61,3 +61,28 @@ def info(i):
     print(f"informacja: {i}")
 
 info("nr 4566")
+
+
+#repeater
+
+def repeater(n):
+    def wrapper(funkcja):
+        def inner(*args):
+            for i in range(n):
+                funkcja(*args)
+        return inner
+    return wrapper
+
+
+@repeater(n=5)
+def komunikat(k,n):
+    print(f'ważny komunikat: {k}, numer: {n}')
+
+komunikat("T5456464",3)
+
+
+@repeater(n=7)
+def hx(n):
+    print((n-1)**7)
+
+hx(9)
