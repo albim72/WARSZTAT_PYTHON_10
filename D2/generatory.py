@@ -41,14 +41,18 @@ def genret():
         else:
             yield i
 
-for x in genret():
-    print(x)
+for t in genret():
+    print(t)
+
+#global x
 
 #generator złozony
 def complexgen():
     x = 0
     while True:
+        print("x-print1")
         y = yield x
+        print("x-print2")
         if y is None:
             x = x+1
         else:
@@ -64,3 +68,8 @@ print(g.send(121))
 print(next(g))
 print(next(g))
 print(next(g))
+
+j=1
+while j<10:
+    print(j)
+    j+=1
