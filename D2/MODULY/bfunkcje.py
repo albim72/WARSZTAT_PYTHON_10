@@ -5,3 +5,6 @@ def czytaj(lista):
 def czytaj_dict(dict):
     for x,y in dict.items():
         print(f"klucz -> {x} : wartość -> {y}")
+# zła praktyka!!!!! polskie znaki w nazwach
+# def parę_słów():
+#     print("a co z polskimi znakami???")
