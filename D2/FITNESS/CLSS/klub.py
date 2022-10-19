@@ -1,8 +1,8 @@
 class Klub:
 
-    def __init__(self,nr,nazwa,adres):
-        self.nr = nr
-        self.nazwa = nazwa
+    def __init__(self,nr_kb,nazwa_kb,adres):
+        self.nr = nr_kb
+        self.nazwa = nazwa_kb
         self.adres = adres
         self.przypisanie()
 
