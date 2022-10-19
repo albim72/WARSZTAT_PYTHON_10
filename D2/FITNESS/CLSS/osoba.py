@@ -9,7 +9,7 @@ class Osoba:
 
     def print_osoba(self):
         print(f"osoba -> {self.imie}, wiek: {self.wiek}, waga: {self.waga} kg,"
-              f" wzrost: {self.wzrost} cm.")
+              f" wzrost: {self.wzrost} cm, kolor oczu: {self.kolor_oczu}")
 
     def czytrener(self):
         return False
