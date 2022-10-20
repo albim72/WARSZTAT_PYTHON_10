@@ -1,3 +1,4 @@
+import math
 from abc import ABC, abstractmethod
 
 class Figura(ABC):
@@ -57,6 +58,23 @@ trp = Trapez(5.5,4.3,4)
 print(f'pole trapezu wynosi:; {trp.policz_pole():.2f}')
 
 #zbuduj klasę Kolo i policz jego pole dla promienia = 5.5
+#math.pi
+
+class Kolo(Figura):
+
+    def __init__(self,a):
+        super().__init__(a,0)
+
+    def policz_pole(self):
+        return math.pi*self.a**2
+
+    def policzobwod(self):
+        pass
+
+
+kl = Kolo(5.5)
+print(f'pole koła wynosi:; {kl.policz_pole():.2f}')
+
 
 
 
