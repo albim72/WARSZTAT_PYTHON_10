@@ -7,7 +7,7 @@ print("______________________________________")
 print("klasa OldResistor")
 r0 = OldResistor(10.2E2)
 print(r0)
-print(r0._ohms)
+print(r0.ohms)
 r0._ohms = 2.88E3
 print(r0._ohms)
 
@@ -42,7 +42,7 @@ try:
       print(f'oporność: {r3.ohms}')
 except ValueError as d:
       print(str(d))
-except:
+except Exception:
       print('Wsytąpił błąd w kodzie wywołującym!')
 
 print("czy program działa???")
